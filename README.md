@@ -34,9 +34,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Report Hub <a name="about-project"></a>
 
-**[your_project__name]** is a...
+ReportHub 📑  is a web application designed to streamline the process of daily reporting within a company. Employees from various departments can easily log their daily activities, upload relevant images and documents, and review their report history. Admins have the capability to create and manage user accounts and view all submitted reports through a centralized dashboard.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -44,14 +44,15 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://html.com/">HTML</a></li>
+    <li><a href="https://www.javascript.com/">JavaScript</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
@@ -66,9 +67,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **Rich Text Reporting **
+- **File Uploads**
+- **Report History**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
