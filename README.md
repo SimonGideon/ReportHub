@@ -4,7 +4,7 @@
 <div align="center">
   <br/>
 
-  <h3><b>ReportHub</b></h3>
+  <h1><b>ReportHub</b></h1>
 
 </div>
 
