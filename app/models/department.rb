@@ -8,8 +8,7 @@ class Department < ApplicationRecord
   
     def manager_name
       manager&.full_name
-    end
-  
+    end  
 
 
 

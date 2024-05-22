@@ -1,6 +1,6 @@
 Trestle.resource(:departments) do
   menu do
-    item :departments, icon: "fa fa-star"
+    item :departments, icon: "fa fa-building"
   end
 
   # Customize the table columns shown on the index view.
@@ -10,6 +10,20 @@ Trestle.resource(:departments) do
   #   column :created_at, align: :center
   #   actions
   # end
+
+  # show relevant fields in the table
+  table do
+    column :id
+    column :name
+    column :manager, through: :manager do |department|
+      department.manager&.full_name
+    end
+    # number of employees
+    column "Employees" do |department|
+      "#{department.users.count} <i class='fa fa-users'></i>".html_safe
+    end
+    actions 
+  end
 
   # Customize the form fields shown on the new/edit views.
   #

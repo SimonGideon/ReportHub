@@ -4,4 +4,4 @@
 // For organizational purposes, you may wish to define your customizations
 // within individual partials and `require` them here.
 //
-//  e.g. //= require "trestle/custom/my_custom_js"
+//= require "trestle/custom/events"

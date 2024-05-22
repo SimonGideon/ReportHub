@@ -6,3 +6,13 @@
  *
  *= require_tree .
 */
+/* .fa-eye {
+  color: #007bff;
+  position: relative;
+  cursor: progress;
+  z-index: 1;
+}
+
+td {
+    z-index: 0;
+} */

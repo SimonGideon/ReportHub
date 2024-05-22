@@ -30,5 +30,4 @@ class User < ApplicationRecord
   def self.available_managers
     User.where(role: :employee)
   end
-
 end
