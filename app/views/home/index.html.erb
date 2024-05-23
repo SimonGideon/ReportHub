@@ -1,2 +1,4 @@
 <h1>Signed in success</h1>
 <h2>Logged in <%= @user.first_name%> </h2>
+<%# log put button %>
+<%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-danger mt-3", data: { turbo_method: :delete } %>

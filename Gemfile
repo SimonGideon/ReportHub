@@ -46,7 +46,11 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# admin
 gem 'trestle'
+
+# trestle auth
+gem 'trestle-auth'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
