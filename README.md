@@ -67,7 +67,7 @@ ReportHub 📑  is a web application designed to streamline the process of daily
 
 ### Key Features <a name="key-features"></a>
 
-- ** Rich Text Reporting **
+- **Rich Text Reporting**
 - **File Uploads**
 - **Report History**
 
