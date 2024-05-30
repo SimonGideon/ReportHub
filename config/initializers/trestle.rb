@@ -20,7 +20,7 @@ Trestle.configure do |config|
   # config.favicon = "favicon.ico"
 
   # Include the helper module
-  config.helper Trestle::ApplicationHelper
+  # config.helper Trestle::ApplicationHelper
 
   # Set the text shown in the page footer within the admin.
   # Defaults to 'Powered by Trestle'.

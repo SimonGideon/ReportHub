@@ -39,8 +39,9 @@ Trestle.resource(:departments) do
   # limit managers to those who don't have a department assigned
   form do |department|
     text_field :name
-    select :manager_id, User.available_managers, label: "Manager"
+    select :manager_id, User.available_managers, label: "Manager", include_blank: true
   end
+  
 
   # By default, all parameters passed to the update and create actions will be
   # permitted. If you do not have full trust in your users, you should explicitly
