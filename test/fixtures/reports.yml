@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  department: one
+  date: 2024-05-30
+  start_time: 2024-05-30 12:41:11
+  end_time: 2024-05-30 12:41:11
+  location: MyString
+  task_description: MyText
+  quantity: 9.99
+  remarks: MyText
+  customer_feedback: MyText
+  optional_note: MyText
+
+two:
+  user: two
+  department: two
+  date: 2024-05-30
+  start_time: 2024-05-30 12:41:11
+  end_time: 2024-05-30 12:41:11
+  location: MyString
+  task_description: MyText
+  quantity: 9.99
+  remarks: MyText
+  customer_feedback: MyText
+  optional_note: MyText

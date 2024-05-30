@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_22_094820) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_30_094111) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,6 +50,24 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_22_094820) do
     t.index ["manager_id"], name: "index_departments_on_manager_id"
   end
 
+  create_table "reports", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "department_id", null: false
+    t.date "date"
+    t.time "start_time"
+    t.time "end_time"
+    t.string "location"
+    t.text "task_description"
+    t.decimal "quantity"
+    t.text "remarks"
+    t.text "customer_feedback"
+    t.text "optional_note"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["department_id"], name: "index_reports_on_department_id"
+    t.index ["user_id"], name: "index_reports_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name", default: ""
     t.string "last_name", default: ""
@@ -76,5 +94,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_22_094820) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "departments", "users", column: "manager_id"
+  add_foreign_key "reports", "departments"
+  add_foreign_key "reports", "users"
   add_foreign_key "users", "departments"
 end
