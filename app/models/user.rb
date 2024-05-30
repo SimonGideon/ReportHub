@@ -12,7 +12,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  before_validation :set_password, on: :create
+  before_save :set_password
 
   def set_password
     self.password = phone_number if encrypted_password.blank?

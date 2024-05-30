@@ -17,13 +17,7 @@ Trestle.resource(:users, model: User, scope: Auth) do
     column :email, link: true
     column :phone_number
     column :role, ->(user) { role_badge(user) }
-    column :department.name, through: :department
-    # hide password and show upon clicking eye icon
-    column "Password" do |user|
-      "<span class='password-field' data-password='#{user.encrypted_password}' data-visible='false'>**********</span>
-       <i class='fa fa-eye eye-icon' style='cursor: pointer; margin-left: 5px;'></i>".html_safe
-    end
-    
+    column :department.name, through: :department    
     actions do |a|
       a.delete unless a.instance == current_user
     end
@@ -42,10 +36,11 @@ Trestle.resource(:users, model: User, scope: Auth) do
       col(sm: 6) { select :role, User.roles.keys }
       col(sm: 6) { select :department_id, Department.all }
     end
+    
 
     row do
       col(sm: 6) { password_field :password, placeholder: "Password"}
-      col(sm: 6) { password_field :password_confirmation, placeholder: "Password confirmation" }
+      col(sm: 6) { password_field :password_confirmation, placeholder: "Password confirmation"}
     end
   end
 
