@@ -65,6 +65,8 @@ class ReportsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def report_params
-      params.require(:report).permit(:user_id, :department_id, :date, :start_time, :end_time, :location, :task_description, :quantity, :remarks, :customer_feedback, :optional_note)
+      user_id = current_user.id
+      department_id = current_user.department_id
+      params.require(:report).permit(:date, :start_time, :end_time, :location, :task_description, :quantity, :remarks, :customer_feedback, :optional_note, :content).merge(user_id: user_id, department_id: department_id)
     end
 end

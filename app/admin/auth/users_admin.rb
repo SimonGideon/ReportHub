@@ -34,8 +34,8 @@ Trestle.resource(:users, model: User, scope: Auth) do
 
     row do
       col(sm: 6) { select :role, User.roles.keys }
-      col(sm: 6) { select :department_id, Department.all }
-    end
+      col(sm: 6) { select :department_id, options_for_select([["Select Department", ""]] + Department.all.collect { |d| [d.name, d.id] }) }
+    end    
     
 
     row do

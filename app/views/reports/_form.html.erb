@@ -10,17 +10,6 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div>
-    <%= form.label :department_id, style: "display: block" %>
-    <%= form.text_field :department_id %>
-  </div>
-
   <div>
     <%= form.label :date, style: "display: block" %>
     <%= form.date_field :date %>
@@ -64,6 +53,11 @@
   <div>
     <%= form.label :optional_note, style: "display: block" %>
     <%= form.text_area :optional_note %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
   </div>
 
   <div>

@@ -10,7 +10,6 @@ class CreateReports < ActiveRecord::Migration[7.0]
       t.text :task_description
       t.decimal :quantity
       t.text :remarks
-      t.text :customer_feedback
       t.text :optional_note
 
       t.timestamps
