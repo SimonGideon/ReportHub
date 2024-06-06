@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   belongs_to :department
-  enum role: { employee: 1, manager: 2, admin: 3 }
-  has_many :managed_departments, class_name: 'Department', foreign_key: 'manager_id'
+  enum role: { employee: 1, manager: 2}
+  has_many :managed_departments, class_name: 'Department', foreign_key: 'manager_id', dependent: :nullify
 
   validates :first_name, :last_name, :email, :phone_number, :role, presence: true
   validates :email, uniqueness: true
@@ -30,4 +30,5 @@ class User < ApplicationRecord
   def self.available_managers
     where(role: :employee)
   end
+    
 end
